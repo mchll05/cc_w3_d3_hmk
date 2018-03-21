@@ -18,7 +18,12 @@ album1.save()
 album2 = Album.new({ 'artist_id' => artist2.id, 'title' => 'Pop it Low', 'release' => 2000 })
 album2.save()
 
-.map { |album| }
+albums_list = albums.map {|album| album[:title]}
+p albums_list
+artists_list = artists.map {|artist| artist[:name]}
+p artists_list
+
+
 
 binding.pry
 nil
